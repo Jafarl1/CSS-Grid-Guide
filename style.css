@@ -1,0 +1,111 @@
+@import url(https://fonts.googleapis.com/css?family=Passero+One:regular);
+@import url(https://fonts.googleapis.com/css?family=Kalam:300,regular,700);
+@import url(https://fonts.googleapis.com/css?family=Blinker:100,200,300,regular,600,700,800,900);
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: Passero One, Georgia, "Times New Roman", Times, serif;
+}
+body {
+  background-color: rgb(40, 49, 49);
+  color: lightgoldenrodyellow;
+}
+header {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 3vw;
+  text-align: center;
+  background-color: rgba(250, 250, 210, 0.16);
+  box-shadow: 0 0 12px 1px rgba(0, 0, 0, 0.5);
+  margin-bottom: 3vh;
+}
+.container {
+  width: 100%;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+}
+.section {
+  padding: 20px 10px;
+  border-bottom: 1px solid rgba(255, 255, 224, 0.4);
+  border-right: 1px solid rgba(255, 255, 224, 0.4);
+  box-shadow: 1px 1px 3px 0px rgba(255, 255, 224, 0.3);
+  transition: all 0.2s ease;
+}
+.section:hover {
+  transform: scale(1.02);
+  box-shadow: 2px 2px 6px 0px rgba(255, 255, 224, 0.3);
+}
+.title {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+.description {
+  font-family: Kalam, Georgia, "Times New Roman", Times, serif;
+  padding: 20px;
+  font-size: 1.1rem;
+}
+.model {
+  display: flex;
+  align-items: start;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+}
+.model:hover {
+  background-color: rgba(255, 255, 224, 0.03);
+}
+.view {
+  width: 80px;
+  height: 80px;
+  padding: 5px;
+  display: grid;
+  gap: 5px;
+  border: 1px solid rgba(255, 255, 224, 0.3);
+}
+.view-child {
+  background-color: rgb(255, 111, 0);
+}
+.code {
+  font-family: Blinker, Georgia, "Times New Roman", Times, serif;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+#grid-template .v1 {
+  grid-template-columns: 12px 12px 12px;
+  grid-template-rows: 12px 12px 12px;
+}
+#grid-template .v2 {
+  grid-template-columns: repeat(3, 12px);
+  grid-template-rows: repeat(3, auto);
+}
+#grid-template .v3 {
+  grid-template-columns: 8px auto 8px;
+  grid-template-rows: 8px auto 12px;
+}
+#grid-template .v4 {
+  grid-template-columns: 22% 22% auto;
+  grid-template-rows: 22% auto 22%;
+}
+#grid-gap .view {
+  grid-template: repeat(3, auto) / repeat(3, auto);
+}
+#grid-gap .v1 {
+  grid-row-gap: 1px;
+  grid-column-gap: 9px;
+}
+#grid-gap .v2 {
+  grid-gap: 1px 9px;
+}
+#grid-gap .v3 {
+  grid-gap: 6px;
+}

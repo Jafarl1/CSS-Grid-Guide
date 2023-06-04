@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>CSS Grid</title>
+  </head>
+  <body>
+    <header>
+      Unlock the Power of CSS Grid: Create Stunning Website Layouts with Ease!
+    </header>
+    <div class="container">
+      <div class="section" id="display">
+        <div class="title">display</div>
+        <div class="description">
+          Establishes a new grid formatting context for children.
+        </div>
+        <div class="model">
+          <div class="view">
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+          </div>
+          <div class="code">display: grid;</div>
+        </div>
+        <div class="model">
+          <div class="view">
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+          </div>
+
+          <div class="code">display: inline-grid;</div>
+        </div>
+        <div class="model">
+          <div class="view">
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+          </div>
+
+          <div class="code">display: subgrid;</div>
+        </div>
+      </div>
+
+      <div class="section" id="grid-template">
+        <div class="title">grid-template</div>
+        <div class="description">Defines the rows and columns of the grid.</div>
+
+        <div class="model">
+          <div class="view v1">
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+          </div>
+          <div class="code">
+            grid-template-columns: 12px 12px 12px;
+            <br />
+            grid-template-rows: 12px 12px 12px;
+          </div>
+        </div>
+
+        <div class="model">
+          <div class="view v2">
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+          </div>
+          <div class="code">
+            grid-template-columns: repeat(3, 12px);
+            <br />
+            grid-template-rows: repeat(3, auto);
+          </div>
+        </div>
+
+        <div class="model">
+          <div class="view v3">
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+          </div>
+          <div class="code">
+            grid-template-columns: 8px auto 8px;
+            <br />
+            grid-template-rows: 8px auto 12px;
+          </div>
+        </div>
+
+        <div class="model">
+          <div class="view v4">
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+          </div>
+          <div class="code">
+            grid-template-columns: 22% 22% auto;
+            <br />
+            grid-template-rows: 22% auto 22%;
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="grid-gap">
+        <div class="title">grid-gap</div>
+        <div class="description">
+          Specifies the size of column and row gutters.
+        </div>
+
+        <div class="model">
+          <div class="view v1">
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+          </div>
+          <div class="code">
+            grid-row-gap: 1px;
+            <br />
+            grid-column-gap: 9px;
+          </div>
+        </div>
+
+        <div class="model">
+          <div class="view v2">
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+          </div>
+          <div class="code">grid-gap: 1px 9px;</div>
+        </div>
+
+        <div class="model">
+          <div class="view v3">
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+            <div class="view-child"></div>
+          </div>
+          <div class="code">grid-gap: 6px;</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="title">display</div>
+        <div class="description"></div>
+        <div class="model"></div>
+      </div>
+      <div class="section">
+        <div class="title">display</div>
+        <div class="description"></div>
+        <div class="model"></div>
+      </div>
+      <div class="section">
+        <div class="title">display</div>
+        <div class="description"></div>
+        <div class="model"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
