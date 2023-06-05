@@ -12,6 +12,8 @@ function copyToClipboard(text) {
 }
 
 models.forEach((btn) => {
-  btn.onclick = (btn) =>
+  btn.onclick = (btn) => {
+    console.log(btn.target);
     copyToClipboard(btn.target.querySelector(".code").textContent);
+  };
 });
