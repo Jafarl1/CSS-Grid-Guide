@@ -9,22 +9,41 @@
   box-sizing: border-box;
   font-family: Passero One, Georgia, "Times New Roman", Times, serif;
 }
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(40, 49, 49);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background: rgb(255, 111, 0);
+}
 body {
   background-color: rgb(40, 49, 49);
   color: lightgoldenrodyellow;
+  user-select: none;
+  overflow-x: hidden;
 }
 header {
   width: 100%;
-  padding: 1.5rem;
-  font-size: 3vw;
   text-align: center;
   background-color: rgba(250, 250, 210, 0.16);
   box-shadow: 0 0 12px 1px rgba(0, 0, 0, 0.5);
-  margin-bottom: 3vh;
+  padding: 1.5rem;
 }
-.container {
+header h1 {
+  font-size: 3vw;
+  margin-bottom: 15px;
+}
+header p {
+  font-size: 1.2vw;
+  font-family: Kalam, Georgia, "Times New Roman", Times, serif;
+}
+.container,
+.children {
   width: 100%;
-  padding: 15px;
+  padding: 30px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 30px;
@@ -32,13 +51,15 @@ header {
 .container-heading {
   text-align: center;
   font-size: 38px;
-  margin: 25px;
+  margin-top: 40px;
   letter-spacing: 2px;
+  text-transform: capitalize;
 }
 .section {
   padding: 20px 10px;
   border-bottom: 1px solid rgba(255, 255, 224, 0.4);
   border-right: 1px solid rgba(255, 255, 224, 0.4);
+  border-radius: 6px 0px;
   box-shadow: 1px 1px 3px 0px rgba(255, 255, 224, 0.3);
   transition: all 0.2s ease;
 }
@@ -97,4 +118,62 @@ header {
 #align-content-1 .view,
 #align-content-2 .view {
   justify-content: start;
+}
+.highlighted {
+  background: #2194bb;
+}
+footer {
+  font-size: 1.2rem;
+  font-family: Blinker, Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+  margin: 50px 30px 30px;
+  letter-spacing: 1px;
+}
+footer a {
+  font-family: Blinker, Georgia, "Times New Roman", Times, serif;
+  color: rgb(255, 111, 0);
+  margin: 5px;
+}
+
+@media screen and (max-width: 880px) {
+  header {
+    padding: 1.5rem 0.5rem;
+  }
+  .container-heading {
+    margin-top: 30px;
+  }
+  .code {
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 760px) {
+  header h1 {
+    margin-bottom: 12px;
+  }
+  .container-heading {
+    font-size: 28px;
+    margin-top: 20px;
+  }
+  .description {
+    text-align: center;
+    font-size: 0.8em;
+  }
+  .code {
+    font-size: 1.2em;
+  }
+  footer {
+    font-size: 0.5rem;
+    margin: 30px 15px 15px;
+  }
+}
+@media screen and (max-width: 420px) {
+  header {
+    padding: 0.5rem;
+  }
+  header h1 {
+    margin-bottom: 8px;
+  }
+  .code {
+    font-size: 0.8em;
+  }
 }
